@@ -205,7 +205,7 @@ body {
     background: #ff6b6b;
     width: 80px;
     height: 80px;
-    border-radius: 12px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,8 +213,9 @@ body {
 }
 
 .icon-box img {
-    width: 40px;
+    width: 80px;
     height: auto;
+    
 }
 
 .legend-section {
@@ -443,12 +444,14 @@ body {
     height: 300px;
     border-radius: 15px;
     overflow: hidden;
+    object-position: top;
 }
 
 .service-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 
@@ -583,25 +586,26 @@ body {
 }
 
 .trainer-img {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%; 
     object-fit: cover;  
     border: 5px solid #fff; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    object-position: top;
 }
 
 .trainer-name {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 200;
     color: #0f172a;
     margin-bottom: 5px;
 }
 
 .trainer-role {
     color: #ff6b6b; 
-    font-weight: 700;
+    font-weight: 500;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -749,4 +753,127 @@ body {
     font-weight: 400;
     color: #64748b;
     margin-top: 2px;
+}
+
+.price-card.featured {
+    border: 2px solid #ff6b6b;
+}
+
+table tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table td {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.table-price {
+    font-weight: 900;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #ff6b6b; 
+}
+
+.price-table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.price-table td:first-child {
+    text-align: left;
+}
+
+.price-table td:last-child {
+    text-align: right;
+}
+
+@keyframes wipe-in-left {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:left"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-left both;
+}
+
+
+@keyframes in-circle-swoop {
+  from {
+   
+    clip-path: circle(0% at 100% 0);
+  }
+  to {
+  
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
+[transition-style="in:custom:circle-swoop"] {
+
+  clip-path: circle(0% at 100% 0);
+
+
+  animation: in-circle-swoop 5s cubic-bezier(.25, 1, .30, 1) both;
+}
+
+
+@keyframes wipe-out-top-right {
+  from {
+    clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+  }
+  to {
+    clip-path: polygon(50% -50%, 150% 50%, 150% 50%, 50% -50%);
+  }
+}
+
+@keyframes wipe-in-top-right {
+  from {
+    clip-path: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
+  }
+  to {
+    clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+  }
+}
+
+[transition-style="in:wipe:top-right"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-top-right both;
+}
+
+
+@keyframes square-in-hesitate {
+  0% {
+    clip-path: inset(100% 100% 100% 100%);
+  }
+  40% {
+    clip-path: inset(33% 33% 33% 33%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:square:hesitate"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+}
+
+
+@keyframes circle-in-hesitate {
+  0% {
+    clip-path: circle(0%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both;
 }
