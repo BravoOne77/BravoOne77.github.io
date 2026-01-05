@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Pro - Strona Główna</title>
+    <link rel="stylesheet" href="plik1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="kontener">
+        <header class="main-header">
+            <img src="logo1.png" alt="Logo" style="height: 50px;">
+            <nav class="nav-menu">
+                <a href="czarek.html" class="active">Strona główna</a>
+                <a href="oferta.html">Oferta</a>
+                <a href="trenerzy.html">Trenerzy</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="cennik.html">Cennik</a>
+            </nav>
+            <a href="rezerwacja.html" class="btn-res">Zarezerwuj</a>
+        </header>
+
+        <main class="hero-wrapper">
+            <div class="hero-text">
+                <span class="badge">Jesteśmy otwarci 6:00 - 23:00</span>
+                <h1>Treningi, które przynoszą efekty.</h1>
+                <h2>Twój cel — nasza misja.</h2>
+                <p style="color: #64748b; font-size: 1.1rem; max-width: 500px;">Nowoczesna siłownia z trenerami personalnymi, planami dietetycznymi oraz zajęciami grupowymi.</p>
+                <div style="margin: 30px 0; display: flex; gap: 20px; align-items: center;">
+                    <a href="rezerwacja.html" class="btn-primary">Umów się</a>
+                    <a href="cennik.html" class="link-cennik">Zobacz cennik</a>
+                </div>
+                <div class="stats-row">
+                    <div class="stat"><b>120+</b><p>Klientów</p></div>
+                    <div class="stat"><b>30+</b><p>Zajęć</p></div>
+                    <div class="stat"><b>10</b><p>Trenerów</p></div>
+                </div>
+            </div>
+            <aside class="side-promo">
+                <div style="display: flex; justify-content: space-between;"><b>Trening gratis</b><b style="color: #ff6b6b;">-25%</b></div>
+                <p style="font-size: 13px; color: #64748b; margin-top: 15px;">Poznaj nasze studio i trenera. Zniżka na karnet dla nowych osób.</p>
+            </aside>
+        </main>
+
+        <section style="margin-top: 80px;">
+            <h2 style="text-align: center;">Nasza Oferta</h2>
+            <p style="text-align: center; color: #64748b;">Szeroki wybór treningów dla każdego.</p>
+                
+            <div class="offer-grid">
+                <a href="uslugi.html#silowy" class="offer-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="icon-box"><img src="jeden.png"></div>
+                    <h3>Trening Siłowy</h3>
+                    <p style="color: #64748b; font-size: 14px;">Programy pod budowę masy mięśniowej i siły.</p>
+                </a>
+            
+                <a href="uslugi.html#grupowe" class="offer-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="icon-box"><img src="dwa.png"></div>
+                    <h3>Zajęcia Grupowe</h3>
+                    <p style="color: #64748b; font-size: 14px;">HIIT, joga i treningi motywacyjne.</p>
+                </a>
+            
+                <a href="uslugi.html#personalny" class="offer-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="icon-box"><img src="trzy.png"></div>
+                    <h3>Trener Personalny</h3>
+                    <p style="color: #64748b; font-size: 14px;">Indywidualne podejście i szybkie rezultaty.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="legend-section">
+            <h1>Nasze Legendy:</h1>
+            <div class="image-row">
+                <img id="img1" src="piec.jpg" alt="Legend 1">
+                <img id="img2" src="cztery.jpg" alt="Legend 2">
+                <img id="img3" src="szesc.jpg" alt="Legend 3">
+            </div>
+        </section>
+
+
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="logo1.png" style="height: 60px; width: auto;">
+                    <div style="margin-top: 10px;">
+                        <p>&copy; 2026 Fitness Pro</p>
+                        <p>Wszelkie prawa zastrzeżone.</p>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="oferta.html">Oferta</a>
+                        <a href="uslugi.html">Trenerzy</a> 
+                        <a href="cennik.html">Cennik</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+    </div>
+
+    <script>
+        const images = ["piec.jpg", "cztery.jpg", "szesc.jpg"];
+        const imgElements = [document.getElementById("img1"), document.getElementById("img2"), document.getElementById("img3")];
+        setInterval(() => {
+            images.unshift(images.pop());
+            imgElements.forEach((img, i) => img.src = images[i]);
+        }, 5000);
+    </script>
+</body>
+</html>
