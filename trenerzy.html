@@ -9,7 +9,10 @@
 <body>
     <div id="kontener" transition-style="in:wipe:top-right">
         <header class="main-header">
-            <img src="logo1.png" alt="Logo" style="height: 50px;">
+            <a href="index.html" class="logo-link">
+  <img src="logo1.png" alt="Logo" style="height: 50px;">
+</a>
+
             <nav class="nav-menu">
                 <a href="index.html">Strona główna</a>
                 <a href="oferta.html">Oferta</a>
@@ -22,7 +25,46 @@
         </header>
 
         
-       ////// TU PISZESZ KODZIK :))))) ///////
+<main>
+  <section style="text-align:center; padding: 30px 0 10px;">
+    <h1 style="margin: 0; font-size: 2rem; color:#0f172a;">Trenerzy</h1>
+    <p style="margin-top: 8px; color:#64748b; font-size: 14px;">
+      Poznaj naszych specjalistów, którzy cię poprowadzą
+    </p>
+
+    <!-- TO JEST KLUCZ: kontener musi mieć class="trainers-grid" -->
+    <div class="trainers-grid">
+
+      <div class="trainer-card trainer-card--simple"
+           onclick="window.location.href='trener-john.html'"
+           style="cursor: pointer;">
+        <img src="john.png" alt="John Pork" class="trainer-img trainer-img--simple">
+        <div class="trainer-name trainer-name--simple">John Pork</div>
+        <div class="trainer-role trainer-role--muted">Mistrz Afryki w kickboxingu</div>
+      </div>
+
+      <div class="trainer-card trainer-card--simple"
+     onclick="window.location.href='trener-marek.html'"
+     style="cursor:pointer;">
+        <img src="marek.png" alt="Marek Towarek" class="trainer-img trainer-img--simple">
+        <div class="trainer-name trainer-name--simple">Marek Towarek</div>
+        <div class="trainer-role trainer-role--muted">Mieszkaniec Targówka</div>
+      </div>
+
+      <div class="trainer-card trainer-card--simple"
+     onclick="window.location.href='trener-goha.html'"
+     style="cursor:pointer;">
+        <img src="goha.png" alt="Gocha Magical" class="trainer-img trainer-img--simple">
+        <div class="trainer-name trainer-name--simple">Gocha Magical</div>
+        <div class="trainer-role trainer-role--muted">Zawodniczka Clout MMA2</div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+
 
 
         <footer class="main-footer">
